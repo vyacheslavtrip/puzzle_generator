@@ -1,0 +1,274 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: rgba(34, 34, 46, 1);
+}
+
+
+header {
+    border-bottom: 1px solid rgba(112, 111, 142, 0.3);
+    height: 80px;
+    background-color: rgb(30, 30, 42);
+}
+
+.container {
+    display: flex; /* Используем Flexbox для размещения элементов на одной строке */
+}
+
+.parameters {
+    background-color: rgb(30, 30, 42);
+    width: 360px;    
+    height: 100vh;          
+    border-right: 1px solid rgba(112, 111, 142, 0.3);     
+    position: relative;         
+    left: 0;                     
+    margin-left: 0;            
+    justify-content: flex-start; 
+}
+
+.image-icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px 90px 0px 0px;
+    float: right;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.image-icon:hover {
+
+    transform: scale(1.1); /* Увеличение масштаба */
+}
+
+.image-nav {
+    fill: rgb(230, 230, 230);
+    width: 40px;
+    height: 40px;
+    margin: 20px 0px 0px 25px;
+    float: left;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.image-nav:hover {
+    fill: rgb(191, 0, 254); /* Изменение цвета заливки */
+    transform: scale(1.1); /* Увеличение масштаба */
+}
+
+.image-nav2 {
+    fill: rgb(230, 230, 230);
+    width: 40px;
+    height: 40px;
+    margin: 20px 0px 10px 30px;
+    float: left;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.image-nav2:hover {
+    fill: rgb(191, 0, 254); /* Изменение цвета заливки */
+    transform: scale(1.1); /* Увеличение масштаба */
+}
+
+.select-block {
+    margin: 30px 20px 30px 20px;
+}
+
+label {
+    font-family: Sansita, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 1.3px;
+}
+
+select {
+    width: 320px;          /* Ширина прямоугольника */
+    height: 48px;         /* Высота прямоугольника */
+    background-color: rgba(57, 58, 90, 1); /* Цвет фона */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    font-family: Sansita, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    color: #d4d4d4;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    appearance: none; /* Убирает стандартный стиль браузера */
+    -moz-appearance: none; /* Для Firefox */
+    -webkit-appearance: none; /* Для Safari и Chrome */
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgba(57, 58, 90, 1);
+}
+
+/* Основной стиль для переключателя */
+.switch {
+    top: 10px;
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    margin-left: 200px;
+}
+
+/* Скрытый чекбокс */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Стиль переключателя (ползунка) */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(57, 58, 90, 1);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* Стиль ползунка */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Состояние "включено" */
+input:checked + .slider {
+    background-color: rgb(191, 0, 254);
+}
+
+/* Положение ползунка при включенном состоянии */
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.p-check {
+    font-family: Sansita, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 1.3px;
+}
+
+.gpt-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 100%;
+    flex-grow: 1;
+    border: 0;
+    background-color: rgba(57, 58, 90, 1);
+    margin: 40px 90px 0px 90px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #d4d4d4;
+    padding: 20px 5px 20px 20px;
+    font-family: Sansita, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.generate-but {
+    width: 150px;          /* Ширина прямоугольника */
+    height: 50px;         /* Высота прямоугольника */
+    background-color: rgba(57, 58, 90, 1); /* Цвет фона */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    font-family: Sansita, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    color: #d4d4d4;
+    border-radius: 6px;
+    border: 0;
+    margin-left: 85px;
+    padding: 0;
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+    cursor: pointer; /* Изменение курсора на руку */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+    text-align: center; /* Выравнивание текста по центру */
+    display: inline-block; 
+}
+
+.generate-but:hover {
+    background-color: rgb(191, 0, 254); /* Цвет фона при наведении */
+}
+
+.text-container {
+    width: 100%;
+    height: 650px;
+    padding: 0px 10px 0px 10px;
+    /* margin-bottom: 120px; */
+    overflow-y: auto;
+    background-color: rgba(57, 58, 90, 1);
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    letter-spacing: 1.5px;
+    line-height: 23px;
+    font-family: "Open Sans", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-size: 14.5px;
+}
+
+p {
+    margin: 0 0 10px; /* Отступ между абзацами */
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#textArea {
+    width: 300px;          /* Ширина прямоугольника */
+    height: 80px;         /* Высота прямоугольника */
+    background-color: rgba(57, 58, 90, 1); /* Цвет фона */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    font-family: Sansita, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    color: #d4d4d4;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    appearance: none; /* Убирает стандартный стиль браузера */
+    -moz-appearance: none; /* Для Firefox */
+    -webkit-appearance: none; /* Для Safari и Chrome */
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    overflow-y: auto;
+    resize: none;
+    border: 1px solid rgba(57, 58, 90, 1);
+}
+
+.custom-bold {
+    font-weight: bold;
+    /* font-style: italic; */
+    font-size: 18px;
+    color: rgb(191, 0, 254);
+    line-height: 40px;
+    font-family: "Montserrat", sans-serif;
+}

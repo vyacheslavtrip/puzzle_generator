@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головоломка</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="image-icon.png" class="image-icon" alt="Иконка">
+            <svg class="image-nav" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M512 1024a510.421333 510.421333 0 0 1-371.584-160A511.850667 511.850667 0 1 1 512 1024z m309.632-160a466.965333 466.965333 0 0 0-619.264 0 467.477333 467.477333 0 0 0 619.264 0zM746.666667 469.333333a234.666667 234.666667 0 1 0-234.666667 234.666667 234.666667 234.666667 0 0 0 234.666667-234.666667zM512 42.666667A468.864 468.864 0 0 0 171.370667 834.133333a510.528 510.528 0 0 1 219.52-115.690666 277.333333 277.333333 0 1 1 242.218666 0 510.528 510.528 0 0 1 219.52 115.690666A468.864 468.864 0 0 0 512 42.666667z"  />
+            </svg>
+            <svg class="image-nav2" viewBox="0 0 1037 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M824.623 143.567c-91.054-23.148-219.141 0-300.937 131.177-83.337-131.177-209.884-154.327-300.937-131.177-108.028 27.779-211.422 128.090-200.624 293.221 15.435 243.835 212.972 456.807 490.755 530.879 3.087 0 4.626 1.541 7.714 1.541 1.541 0 3.087 0 3.087 0 1.541 0 3.087 0 3.087 0 3.087 0 4.626 0 7.714-1.541 41.667-10.803 75.62-20.064 118.828-40.124 15.435-7.714 21.605-26.235 15.435-41.667s-26.235-21.605-41.667-15.435c-37.036 16.978-66.358 26.235-103.396 35.498-250.007-67.901-427.485-257.725-441.371-473.775-7.714-128.090 72.534-208.336 154.327-228.401 123.463-32.409 214.515 55.558 254.637 140.435 6.174 12.346 18.521 18.521 32.409 16.978 12.346 1.541 26.235-4.626 32.409-16.978 40.124-84.876 131.177-172.846 254.637-140.435 83.337 21.605 163.586 100.313 154.327 228.401-9.261 143.52-87.964 274.701-220.686 370.38-13.89 9.261-16.978 29.322-7.714 43.212 6.174 7.714 15.435 12.346 24.691 12.346 6.174 0 12.346-1.541 18.521-6.174 148.153-106.482 236.118-254.637 246.922-416.679 9.261-162.043-95.679-263.898-202.167-291.675z"  />
+            </svg>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="parameters">
+
+                <form id="multiSelectForm">
+                    <div class="select-block">
+                        <label for="select1">Вид головоломки</label>
+                        <select id="select1" name="select1">
+                            <option value="Logical">Логическая</option>
+                            <option value="Verbal">Словесная</option>
+                            <option value="Riddle">Загадка</option>
+                        </select>   
+                    </div>
+                    
+                    <div class="select-block">
+                        <label for="select2">Сложность</label>
+                        <select id="select2" name="select2">
+                            <option value="Easy">Легкая</option>
+                            <option value="Medium">Средняя</option>
+                            <option value="Hard">Сложная</option>
+                        </select>
+                    </div>
+
+                    <div class="select-block">
+                        <label for="select3">Уровень партии</label>
+                        <select id="select3" name="select3">
+                            <option value="1-4">Первый тир (1 - 4 уровни)</option>
+                            <option value="5-10">Второй тир (5 - 10 уровни)</option>
+                            <option value="11-16">Третий тир (11 - 16 уровни)</option>
+                            <option value="17-20">Четвертый тир (17 - 20 уровни)</option>
+                        </select>
+                    </div>
+
+                    <div class="select-block">
+                        <label for="select4">Награда</label>
+                        <select id="select4" name="select4">
+                            <option value="No">Нет</option>
+                            <option value="Money">Монеты</option>
+                            <option value="Artifact">Артефакт</option>
+                            <option value="Boss fight">Бой с Боссом :D</option>
+                        </select>
+                    </div>
+
+                    <div class="select-block">
+                        <label for="textArea">Ключевые слова: </label>
+                        <textarea id="textArea" name="textArea"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="generate-but">Go</button>
+                </form>
+
+            </div>
+            <div class="gpt-zone">
+
+                <div class="text-container" id="result"></div>
+
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
